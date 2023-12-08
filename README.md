@@ -1,3 +1,3 @@
 # Verito
 
-https://edn22.github.io/Verito/
+ https://shabeebkaruvath.github.io/Verito/
