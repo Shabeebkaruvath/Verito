@@ -26,7 +26,6 @@ body {
   font-family: var(--font-default);
   color: var(--color-default);
 }
- 
 
 a {
   color: var(--color-primary);
@@ -116,11 +115,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #676775;
@@ -164,13 +163,13 @@ section {
 
 .scroll-top i {
   font-size: 24px;
-  color: #fff;
+  color: var(--color-default);
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background: #ec2727;
-  color: #fff;
+  background: #000000;
+  color: #ff0000;
 }
 
 .scroll-top.active {
@@ -264,15 +263,13 @@ section {
   margin-right: 6px;
 }
 
-
 .header .logo h {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: bolder;
   color: var(--color-default);
   margin: 0;
-  font-family: var(--font-secondary);
+  font-family: sans-serif;
   display: contents;
-
 }
 
 .header .logo h1 span {
@@ -321,7 +318,7 @@ section {
     position: relative;
   }
 
-  .navbar>ul>li {
+  .navbar > ul > li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
   }
@@ -348,7 +345,7 @@ section {
     margin-left: 5px;
   }
 
-  .navbar>ul>li>a:before {
+  .navbar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -362,7 +359,7 @@ section {
   }
 
   .navbar a:hover:before,
-  .navbar li:hover>a:before,
+  .navbar li:hover > a:before,
   .navbar .active:before {
     visibility: visible;
     width: 100%;
@@ -371,7 +368,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #000;
   }
 }
@@ -381,13 +378,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -398,7 +394,6 @@ section {
 # Mobile Navigation
 --------------------------------------------------------------*/
 @media (max-width: 1279px) {
-
   .header .btn-book-a-table,
   .header .btn-book-a-table:focus {
     font-size: 10px;
@@ -417,7 +412,6 @@ section {
     margin: 0;
     font-family: var(--font-secondary);
     display: contents;
-
   }
 
   .navbar {
@@ -466,7 +460,7 @@ section {
   }
 
   .navbar a:hover,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #000;
   }
 
@@ -486,8 +480,8 @@ section {
     border: 1px solid #eee;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -602,10 +596,6 @@ section {
   }
 }
 
-
-
-
-
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
@@ -684,9 +674,8 @@ section {
 .menu .tab-content .menu-item .menu-img {
   padding: 0 60px;
   margin-bottom: 15px;
-  border-radius: 35%;
+  border-radius: 25%;
 }
- 
 
 .menu .tab-content .menu-item h4 {
   font-size: 22px;
@@ -801,7 +790,7 @@ section {
 .gallery {
   overflow: hidden;
 }
-.gallery img{
+.gallery img {
   border-radius: 20px;
 }
 
@@ -909,7 +898,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1078,9 +1067,9 @@ section {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background-color: var(--color-primary);
+  background-color: black;
   padding: 50px 0;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--color-primary);
 }
 
 .footer .icon {
@@ -1094,7 +1083,7 @@ section {
   font-weight: bold;
   position: relative;
   padding-bottom: 5px;
-  color: #000000;
+  color: var(--color-primary);
 }
 
 .footer .footer-links {
@@ -1135,16 +1124,16 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-primary);
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--color-primary);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--color-default);
-  border-color: var(--color-default);
+  color: white;
+  border-color: white;
 }
 
 .footer .copyright {
@@ -1166,6 +1155,6 @@ section {
 .section-bg1 {
   background: var(--color-default);
 }
-.menu-item img{
+.menu-item img {
   border-radius: 10px;
 }
