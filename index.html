@@ -357,7 +357,7 @@
                         <h3>
                           <a
                             href="https://www.instagram.com/reel/Cmd8EsHobHa/?utm_source=ig_web_button_share_sheet"
-                            style="text-decoration: none; color: #000;"
+                            style="text-decoration: none; color: #000"
                             >foodexplore_ani</a
                           >
                         </h3>
@@ -471,12 +471,13 @@
 
           <div class="mb-3" id="map">
             <iframe
+              id="lazyIframe"
               style="border: 0; width: 100%; height: 350px"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.4396985488975!2d76.2087973!3d10.9301207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cf6294974c5f%3A0xb38fd22239231121!2sVerito%20Honey%20Cakes!5e0!3m2!1sen!2sin!4v1701861250342!5m2!1sen!2sin"
+              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.4396985488975!2d76.2087973!3d10.9301207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7cf6294974c5f%3A0xb38fd22239231121!2sVerito%20Honey%20Cakes!5e0!3m2!1sen!2sin!4v1701861250342!5m2!1sen!2sin"
               frameborder="0"
               allowfullscreen
               class="rounded"
-              async
+              loading="lazy"
             ></iframe>
           </div>
           <!-- End Google Maps -->
@@ -684,6 +685,13 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Template Main JS File -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var lazyIframe = document.getElementById("lazyIframe");
+        var dataSrc = lazyIframe.getAttribute("data-src");
+        lazyIframe.setAttribute("src", dataSrc);
+      });
+    </script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
