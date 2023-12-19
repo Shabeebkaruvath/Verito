@@ -83,7 +83,6 @@
               Our Products are now
               <span style="color: #c3001f">available</span> in your locality
             </h2>
-            <!-- Styled Selection Bar -->
             <div class="selection-container">
               <label for="locations" class="location-label"
                 >Select District:</label
@@ -93,10 +92,10 @@
                 <option value="calicut">Calicut</option>
                 <option value="thrissur">Thrissur</option>
                 <option value="malappuram">Malappuram</option>
-                <option value="malappuram">Ernakulam</option>
+                <option value="ernakulam">Ernakulam</option>
+                 
               </select>
             </div>
-            <!-- End of Styled Selection Bar -->
           </div>
           <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
             <img
@@ -111,9 +110,7 @@
         </div>
         <div class="container locatei" id="shopDetails" style="display: none">
           <center>
-            <div id="shopsList">
-              
-            </div>
+            <div id="shopsList"></div>
           </center>
         </div>
       </div>
@@ -140,6 +137,11 @@
                     1st Bulding, Verito Eco Park Chirattamala<br />
                     Perintalmanna, Kerala 679338<br />
                     India
+                    <a
+                      href="https://maps.app.goo.gl/PN4tgxGM6NssyF7Y7"
+                      style="color: blue; text-decoration: none"
+                      >Get Location</a
+                    >
                   </p>
                 </div>
               </div>
@@ -183,7 +185,6 @@
             <!-- End Info Item -->
           </div>
 
-           
           <!--End Contact Form -->
         </div>
       </section>
@@ -284,7 +285,6 @@
         const shopsList = document.getElementById("shopsList");
         const locationsSelect = document.getElementById("locations");
 
-        // Updated dummy data for shops in different districts
         const shopsData = {
           malappuram: [
             {
@@ -327,30 +327,31 @@
               mobileNumber: "+91 9995969291",
               mapLink: "https://maps.app.goo.gl/9q9QL6jWenjrdL446",
             },
-             
+
             // Add more shops as needed
           ],
-          Ernakulam: [
+          ernakulam: [
             {
               name: "Sylcon Hypermarket Marine Drive",
-              location: "67/4410 A&B, Ground & First Floor Holiday, Bay Castle, Shanmugham Rd, Marine Drive, Kochi, Ernakulam, Kerala 682031",
+              location:
+                "67/4410 A&B, Ground & First Floor Holiday, Bay Castle, Shanmugham Rd, Marine Drive, Kochi, Ernakulam, Kerala 682031",
               mobileNumber: "+91 7593814241",
-              mapLink: "https://maps.app.goo.gl/QA3e7ryNzUBFqYS5A", 
+              mapLink: "https://maps.app.goo.gl/QA3e7ryNzUBFqYS5A",
             },
             {
               name: "Sylcon Supermarket Kadavanthra",
-              location: "KCRWA-111, KP Vallon Rd, Indira Nagar, Kadavanthra, Kochi, Ernakulam, Kerala 682020",
+              location:
+                "KCRWA-111, KP Vallon Rd, Indira Nagar, Kadavanthra, Kochi, Ernakulam, Kerala 682020",
               mobileNumber: "+91 9544200217",
               mapLink: "https://maps.app.goo.gl/AA4w5k2cbFxd4Vfh7",
             },
             // Add more shops as needed
           ],
-          // Add more districts and shops accordingly
+           
         };
 
-        // Function to display shop details for selected district
         function displayShopDetails(selectedDistrict) {
-          shopsList.innerHTML = ""; // Clear previous shop details
+          shopsList.innerHTML = "";
 
           if (shopsData[selectedDistrict]) {
             const shopsInDistrict = shopsData[selectedDistrict];
@@ -358,16 +359,18 @@
               const shopItem = document.createElement("div");
               shopItem.classList.add("locateone");
               shopItem.innerHTML = `
-                 <h4>${shop.name}</h4> 
-                <p>${shop.location}</p>
-                ${
-                  shop.mobileNumber ? `<p>Mobile: ${shop.mobileNumber}</p>` : ""
-                }
-                <button class="btn"><a href="${
-                  shop.mapLink
-                }">Get Direction</a></button>
-                 
-              `;
+                    <h4>${shop.name}</h4> 
+                    <p>${shop.location}</p>
+                    ${
+                      shop.mobileNumber
+                        ? `<p><i class="bi bi-telephone icon"></i> ${shop.mobileNumber}</p>`
+                        : ""
+                    }
+                    <button class="btn"><a href="${
+                      shop.mapLink
+                    }"><i class="bi bi-geo-alt icon"></i> Get Direction</a></button>
+                    <hr>
+                `;
               shopsList.appendChild(shopItem);
             });
 
@@ -377,7 +380,6 @@
           }
         }
 
-        // Event listener for changes in select
         locationsSelect.addEventListener("change", function () {
           const selectedDistrict = locationsSelect.value;
           displayShopDetails(selectedDistrict);

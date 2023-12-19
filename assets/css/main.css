@@ -1238,10 +1238,11 @@ section {
   border: none;
 }
 #shopsList {
-  border-top: 2px solid var(--color-default);
+  border: 10px solid var(--color-default);
+ border-radius: 10px;
   padding-top: 40px;
 }
 .locateone {
   margin-bottom: 50px;
-  max-width: 70%;
+  max-width: 50%;
 }
