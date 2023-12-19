@@ -674,7 +674,6 @@ section {
 .menu .tab-content .menu-item .menu-img {
   padding: 0 60px;
   margin-bottom: 15px;
-   
 }
 
 .menu .tab-content .menu-item h4 {
@@ -1006,8 +1005,7 @@ section {
   font-weight: 400;
   margin-bottom: 30px;
 }
-.hero .btn-book-a-table img{
- 
+.hero .btn-book-a-table img {
   width: 14px;
 }
 .hero .btn-book-a-table {
@@ -1160,4 +1158,90 @@ section {
 }
 .menu-item img {
   border-radius: 10px;
+}
+
+/* Style for the selection container */
+.selection-container {
+  margin-top: 20px;
+}
+
+/* Style for the label of the selection */
+.location-label {
+  font-weight: bolder;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+/* Style for the select element */
+.location-select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  
+  border: 1px solid #a3a3a3;
+  background: transparent;
+}
+.location-select:focus {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #a3a3a3;
+  background: transparent;
+}
+
+/* Style for select option items */
+.location-select option {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+.locatei {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.locatei a {
+  color: black;
+  text-decoration: none;
+}
+.locatei a:hover{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.locatei .btn {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: var(--font-secondary);
+  font-weight: 600;
+}
+#shopsList h4 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+#shopsList button {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  background-color: var(--color-primary);
+  color: #000000;
+  border-radius: 5px;
+  border: none;
+}
+#shopsList button:hover {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  background-color: var(--color-default);
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+#shopsList {
+  border-top: 2px solid var(--color-default);
+  padding-top: 40px;
+}
+.locateone {
+  margin-bottom: 50px;
+  max-width: 70%;
 }
