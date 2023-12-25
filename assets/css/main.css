@@ -1168,32 +1168,38 @@ section {
 /* Style for the label of the selection */
 .location-label {
   font-weight: bolder;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+  
   font-size: 20px;
 }
 
 /* Style for the select element */
 .location-select {
-  width: 200px;
-  padding: 10px;
-  font-size: 16px;
-  
-  border: 1px solid #000000;
-  background: transparent;
+  width: 170px;
+  padding: 12px;
+  font-size: 15px;
+  color: #e9c667;
+  background: #c3001f;
+  border: 1px solid #c3001f;
+  border-radius:50px;
 }
+ 
 .location-select:focus {
-  width: 200px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #161616;
-  background: transparent;
+  width: 170px;
+  padding: 12px;
+  font-size: 15x;
+  color: #e9c667;
+  background: #c3001f;
+  border: 1px solid #c3001f ;
+  border-radius:50px;
 }
 
 /* Style for select option items */
 .location-select option {
-  background-color: #fff;
-  color: #000;
+  background-color: #c3001f;
+  color: #e9c667;
   font-size: 16px;
+  
 }
 .locatei {
   display: flex;
