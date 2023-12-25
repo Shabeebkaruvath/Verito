@@ -1175,24 +1175,27 @@ section {
 
 /* Style for the select element */
 .location-select {
-  width: 170px;
-  padding: 12px;
+  width: 173px; /* Increased width to accommodate the SVG */
+  padding: 5px 20px 5px 27px; /* Added padding-right to create space between text and arrow */
   font-size: 15px;
   color: #e9c667;
   background: #c3001f;
   border: 1px solid #c3001f;
-  border-radius:50px;
+  border-radius: 30px;
+  appearance: none; /* Remove default arrow in some browsers */
+  -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 20 12" fill="none"><path d="M9.99444 12C10.4508 12 10.8292 11.8395 11.1853 11.4613L19.5659 2.6361C19.8553 2.33811 20 1.98281 20 1.55874C20 0.699141 19.3322 8.45038e-07 18.4975 8.08551e-07C18.0746 7.90065e-07 17.7073 0.183382 17.4068 0.492837L9.98331 8.33238L2.58208 0.492837C2.28158 0.183381 1.90317 8.31903e-08 1.49137 6.51901e-08C0.65665 2.87031e-08 -3.05604e-08 0.69914 -6.81347e-08 1.55874C-8.66713e-08 1.98281 0.133556 2.33811 0.422927 2.6361L8.80356 11.4613C9.15971 11.8281 9.53812 12 9.99444 12Z" fill="%23E9C667"/></svg>'); /* Add your own SVG data */
+  background-position: right 15px center; /* Adjusted position to align with text */
+  background-repeat: no-repeat;
 }
- 
+
 .location-select:focus {
-  width: 170px;
-  padding: 12px;
-  font-size: 15x;
-  color: #e9c667;
-  background: #c3001f;
-  border: 1px solid #c3001f ;
-  border-radius:50px;
+  outline: none;
+  border-color: #e9c667;
 }
+
+ 
 
 /* Style for select option items */
 .location-select option {
